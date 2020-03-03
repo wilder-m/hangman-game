@@ -26,14 +26,12 @@ def hangman_game():
 
     #this computer starts guessing letters
     
-''' Miguel you need to repair the code below this line by replacing anything in <<>> brackets with the correct value.
-When you are done filling in all the brackets erase lines 29, 30 and 54 and test the program to see if it works.
-    while win == <<what goes here? True or False>>:
+    while win == False:
         guess = random.choice(alpha)
         
         print 'I\'m guessing ' + guess
         alpha.remove(guess) #this is how you take a letter out of a list
-        guessed <<what goes here?>> guess  #this is how you add the letter to guessed
+        guessed += guess  #this is how you add the letter to guessed
         #check the phrase for the letter guessed            
         if guess in secret.lower():
             out = '' #repeat the display output with the new letter guessed
@@ -44,13 +42,13 @@ When you are done filling in all the brackets erase lines 29, 30 and 54 and test
                     out += '-'
             print out
             if '-' in out: #checks to see whether or not all the letters are guessed
-                win = <<True or False?>>
+                win = False
             else:
                 print 'I got it in ' + str(tries) + ' tries'
-                win = <<True or False?>>   #this will break the while loop
+                win = True   #this will break the while loop
         else:
             print "that was no good. I\'m going to try again" 
-        tries += <<what number goes here?>> #counts the number of tries
-Erase this line when you are done '''
+        tries += 1 #counts the number of tries
+
             
             
